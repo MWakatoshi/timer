@@ -57,8 +57,11 @@ function updateTimer() {
 function stopTimer() {
     clearInterval(intervalId);
 
-    hideElement(btnStop);
+    setTimeout(() => {
+        btnStop.computedStyleMap.opacity = 0.5;
+    }, 2200)
     showElement(btnStart);
+    hideElement(btnStop);
     document.exitFullscreen();
 }
 
