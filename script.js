@@ -48,8 +48,7 @@ function updateTimer() {
         inputMinutes.value = minutes.toString().padStart(2, "0");
         inputSeconds.value = seconds.toString().padStart(2, "0");
     } else {
-        clearInterval(intervalId);
-        document.exitFullscreen();
+        stopTimer();
     }
 
 }
